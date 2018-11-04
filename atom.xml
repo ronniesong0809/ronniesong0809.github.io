@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://ronniesong.tk/"/>
+  <link href="http://yoursite.com/"/>
   <updated>2018-11-04T11:33:15.847Z</updated>
-  <id>http://ronniesong.tk/</id>
+  <id>http://yoursite.com/</id>
   
   <author>
     <name>Ronnie Song</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World!</title>
-    <link href="http://ronniesong.tk/2018/11/01/Hello-World/"/>
-    <id>http://ronniesong.tk/2018/11/01/Hello-World/</id>
+    <link href="http://yoursite.com/2018/11/01/Hello-World/"/>
+    <id>http://yoursite.com/2018/11/01/Hello-World/</id>
     <published>2018-11-01T20:27:42.000Z</published>
     <updated>2018-11-04T11:33:15.847Z</updated>
     
@@ -35,10 +35,10 @@
     
     </summary>
     
-      <category term="coding" scheme="http://ronniesong.tk/categories/coding/"/>
+      <category term="coding" scheme="http://yoursite.com/categories/coding/"/>
     
     
-      <category term="code" scheme="http://ronniesong.tk/tags/code/"/>
+      <category term="code" scheme="http://yoursite.com/tags/code/"/>
     
   </entry>
   
