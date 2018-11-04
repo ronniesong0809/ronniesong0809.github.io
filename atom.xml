@@ -2,8 +2,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ronnie</title>
   
-  <subtitle>The world of 0 and 1</subtitle>
-  <link href="/about/atom.xml" rel="self"/>
+  
+  <link href="/atom.xml" rel="self"/>
   
   <link href="http://ronniesong.tk/"/>
   <updated>2018-11-04T11:33:15.847Z</updated>
