@@ -366,7 +366,7 @@
                 
               
 
-              <time title="Created: 2018-11-05 12:38:19 / Modified: 13:04:55" itemprop="dateCreated datePublished" datetime="2018-11-05T12:38:19-08:00">2018-11-05</time>
+              <time title="Created: 2018-11-05 12:38:19 / Modified: 13:15:27" itemprop="dateCreated datePublished" datetime="2018-11-05T12:38:19-08:00">2018-11-05</time>
             
 
             
@@ -447,7 +447,7 @@
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Usage: <span class="keyword">ADD</span> &lt;src&gt; &lt;dest&gt;</span><br><span class="line">解释：ADD指令用于从指定路径拷贝一个文件或目录到容器的指定路径中，&lt;src&gt;是一个文件或目录的路径，也可以是一个url，路径是相对于该Dockerfile文件所在位置的相对路径，&lt;dest&gt;是目标容器的一个绝对路径。</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>WORKDIR</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">语法: <span class="keyword">WORKDIR</span> /path/to/workdir</span><br><span class="line">解释：WORKDIR指令用于设置Dockerfile中的RUN、CMD和ENTRYPOINT指令执行命令的工作目录(默认为/目录)，该指令在Dockerfile文件中可以出现多次，如果使用相对路径则为相对于WORKDIR上一次的值，例如WORKDIR /data，WORKDIR logs，RUN pwd最终输出的当前目录是/data/logs。</span><br></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Usage: <span class="keyword">WORKDIR</span> /path/to/workdir</span><br><span class="line">解释：WORKDIR指令用于设置Dockerfile中的RUN、CMD和ENTRYPOINT指令执行命令的工作目录(默认为/目录)，该指令在Dockerfile文件中可以出现多次，如果使用相对路径则为相对于WORKDIR上一次的值，例如WORKDIR /data，WORKDIR logs，RUN pwd最终输出的当前目录是/data/logs。</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>RUN</p>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Usage: ① <span class="keyword">RUN</span> &lt;command&gt;   #将会调用/bin/sh -c &lt;command&gt;</span><br><span class="line">       ② RUN ["executable", "param1", "param2"] #将会调用exec执行，以避免有些时候shell方式执行时的传递参数问题，而且有些基础镜像可能不包含/bin/sh</span><br><span class="line">解释：RUN指令会在一个新的容器中执行任何命令，然后把执行后的改变提交到当前镜像，提交后的镜像会被用于Dockerfile中定义的下一步操作，RUN中定义的命令会按顺序执行并提交，这正是Docker廉价的提交和可以基于镜像的任何一个历史点创建容器的好处，就像版本控制工具一样。</span><br></pre></td></tr></table></figure>
