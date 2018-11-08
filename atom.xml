@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-08T21:34:47.317Z</updated>
+  <updated>2018-11-08T21:43:59.405Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Single Number</title>
+    <link href="http://yoursite.com/2018/11/08/Single-Number/"/>
+    <id>http://yoursite.com/2018/11/08/Single-Number/</id>
+    <published>2018-11-08T21:43:59.000Z</published>
+    <updated>2018-11-08T21:43:59.405Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Linked List Cycle</title>
