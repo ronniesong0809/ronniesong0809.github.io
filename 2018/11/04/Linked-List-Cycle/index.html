@@ -120,17 +120,18 @@
 
 
 
-  <meta name="description" content="Be a better programmer">
+  <meta name="description" content="Given a linked list, determine if it has a cycle in it. Follow up:Can you solve it without using extra space? The way to solve this problem is to set two pointers, slow and fast from the head of linke">
+<meta name="keywords" content="leecode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Single Number">
-<meta property="og:url" content="http://yoursite.com/2018/11/08/Single-Number/index.html">
+<meta property="og:title" content="Linked List Cycle">
+<meta property="og:url" content="http://yoursite.com/2018/11/04/Linked-List-Cycle/index.html">
 <meta property="og:site_name" content="Ronnie">
-<meta property="og:description" content="Be a better programmer">
+<meta property="og:description" content="Given a linked list, determine if it has a cycle in it. Follow up:Can you solve it without using extra space? The way to solve this problem is to set two pointers, slow and fast from the head of linke">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-08T21:43:59.405Z">
+<meta property="og:updated_time" content="2018-11-09T01:54:28.830Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Single Number">
-<meta name="twitter:description" content="Be a better programmer">
+<meta name="twitter:title" content="Linked List Cycle">
+<meta name="twitter:description" content="Given a linked list, determine if it has a cycle in it. Follow up:Can you solve it without using extra space? The way to solve this problem is to set two pointers, slow and fast from the head of linke">
 
 
 
@@ -139,7 +140,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/08/Single-Number/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/04/Linked-List-Cycle/">
 
 
 
@@ -149,7 +150,7 @@
   };
 </script>
 
-  <title>Single Number | Ronnie</title>
+  <title>Linked List Cycle | Ronnie</title>
   
 
 
@@ -258,7 +259,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">3</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">4</span></a>
   </li>
         
         
@@ -344,7 +345,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/08/Single-Number/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/04/Linked-List-Cycle/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ronnie Song">
@@ -361,7 +362,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Single Number
+          <h1 class="post-title" itemprop="name headline">Linked List Cycle
               
             
           </h1>
@@ -386,12 +387,46 @@
                 
               
 
-              <time title="Created: 2018-11-08 13:43:59" itemprop="dateCreated datePublished" datetime="2018-11-08T13:43:59-08:00">2018-11-08</time>
+              <time title="Created: 2018-11-04 13:00:32" itemprop="dateCreated datePublished" datetime="2018-11-04T13:00:32-08:00">2018-11-04</time>
             
 
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-11-08 17:54:28" itemprop="dateModified" datetime="2018-11-08T17:54:28-08:00">2018-11-08</time>
+              
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -401,9 +436,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/11/08/Single-Number/#comments" itemprop="discussionUrl">
+                <a href="/2018/11/04/Linked-List-Cycle/#comments" itemprop="discussionUrl">
                 
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/11/08/Single-Number/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/11/04/Linked-List-Cycle/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -438,7 +473,12 @@
       
 
       
-        
+        <p><strong>Given a linked list, determine if it has a cycle in it.</strong></p>
+<p><em>Follow up:<br>Can you solve it without using extra space?</em></p>
+<p>The way to solve this problem is to set two pointers, slow and fast from the head of linked list. By moving slow pointer 1-node/time and fast pointer 2-nodes/time. If there is a loop, then they will definitely meet.</p>
+<h2 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">hasCycle</span><span class="params">(ListNode *head)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (!head||!head-&gt;next)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        ListNode *slow = head;</span><br><span class="line">        ListNode *fast = head;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> (fast &amp;&amp; fast-&gt;next) &#123;</span><br><span class="line">            slow = slow-&gt;next;</span><br><span class="line">            fast = fast-&gt;next-&gt;next;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (slow == fast)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hasCycle</span><span class="params">(self, head)</span>:</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> head==<span class="keyword">None</span> <span class="keyword">or</span> head.next==<span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">        </span><br><span class="line">        slow = head</span><br><span class="line">        fast = head</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            slow = slow.next</span><br><span class="line">            fast = fast.next.next</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (slow == fast):</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">            </span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -469,6 +509,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/leecode/" rel="tag"># leecode</a>
+          
+        </div>
+      
 
       
       
@@ -478,8 +524,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/08/Linked-List-Cycle/" rel="next" title="Linked List Cycle">
-                <i class="fa fa-chevron-left"></i> Linked List Cycle
+              <a href="/2018/11/01/Hello-World/" rel="next" title="Hello World!">
+                <i class="fa fa-chevron-left"></i> Hello World!
               </a>
             
           </div>
@@ -487,6 +533,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/05/Note-for-Dockerfile/" rel="prev" title="Note for Dockerfile">
+                Note for Dockerfile <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -541,8 +591,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -597,7 +656,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">tags</span>
                   
                 </div>
@@ -654,6 +715,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#C"><span class="nav-number">1.</span> <span class="nav-text">C++</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python"><span class="nav-number">2.</span> <span class="nav-text">Python</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -821,9 +898,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2018/11/08/Single-Number/';
-        this.page.identifier = '2018/11/08/Single-Number/';
-        this.page.title = 'Single Number';
+        this.page.url = 'http://yoursite.com/2018/11/04/Linked-List-Cycle/';
+        this.page.identifier = '2018/11/04/Linked-List-Cycle/';
+        this.page.title = 'Linked List Cycle';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');

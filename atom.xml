@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-08T21:43:59.405Z</updated>
+  <updated>2018-11-09T01:54:46.414Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,33 +18,20 @@
   
   <entry>
     <title>Single Number</title>
-    <link href="http://yoursite.com/2018/11/08/Single-Number/"/>
-    <id>http://yoursite.com/2018/11/08/Single-Number/</id>
-    <published>2018-11-08T21:43:59.000Z</published>
-    <updated>2018-11-08T21:43:59.405Z</updated>
+    <link href="http://yoursite.com/2018/11/05/Single-Number/"/>
+    <id>http://yoursite.com/2018/11/05/Single-Number/</id>
+    <published>2018-11-05T21:43:59.000Z</published>
+    <updated>2018-11-09T01:54:46.414Z</updated>
     
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Linked List Cycle</title>
-    <link href="http://yoursite.com/2018/11/08/Linked-List-Cycle/"/>
-    <id>http://yoursite.com/2018/11/08/Linked-List-Cycle/</id>
-    <published>2018-11-08T21:00:32.000Z</published>
-    <updated>2018-11-08T21:34:47.317Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>Given a linked list, determine if it has a cycle in it.</strong></p><p><em>Follow up:<br>Can you solve it without using extra space?</em></p><p>The way to solve this problem is to set two pointers, slow and fast from the head of linked list. By moving slow pointer 1-node/time and fast pointer 2-nodes/time. If there is a loop, then they will definitely meet.</p><h2 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">hasCycle</span><span class="params">(ListNode *head)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (!head||!head-&gt;next)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        ListNode *slow = head;</span><br><span class="line">        ListNode *fast = head;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> (fast &amp;&amp; fast-&gt;next) &#123;</span><br><span class="line">            slow = slow-&gt;next;</span><br><span class="line">            fast = fast-&gt;next-&gt;next;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (slow == fast)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hasCycle</span><span class="params">(self, head)</span>:</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> head==<span class="keyword">None</span> <span class="keyword">or</span> head.next==<span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">        </span><br><span class="line">        slow = head</span><br><span class="line">        fast = head</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            slow = slow.next</span><br><span class="line">            fast = fast.next.next</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (slow == fast):</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">            </span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">False</span></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>XOR</p><p>a^a=0<br>a^b=b^a</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;strong&gt;Given a linked list, determine if it has a cycle in it.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Follow up:&lt;br&gt;Can you solve it without using extra sp
+        &lt;p&gt;XOR&lt;/p&gt;
+&lt;p&gt;a^a=0&lt;br&gt;a^b=b^a&lt;/p&gt;
+
       
     
     </summary>
@@ -52,7 +39,7 @@
       <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
     
     
-      <category term="leecode" scheme="http://yoursite.com/tags/leecode/"/>
+      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
     
   </entry>
   
@@ -78,6 +65,32 @@
     
     
       <category term="note" scheme="http://yoursite.com/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linked List Cycle</title>
+    <link href="http://yoursite.com/2018/11/04/Linked-List-Cycle/"/>
+    <id>http://yoursite.com/2018/11/04/Linked-List-Cycle/</id>
+    <published>2018-11-04T21:00:32.000Z</published>
+    <updated>2018-11-09T01:54:28.830Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Given a linked list, determine if it has a cycle in it.</strong></p><p><em>Follow up:<br>Can you solve it without using extra space?</em></p><p>The way to solve this problem is to set two pointers, slow and fast from the head of linked list. By moving slow pointer 1-node/time and fast pointer 2-nodes/time. If there is a loop, then they will definitely meet.</p><h2 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">hasCycle</span><span class="params">(ListNode *head)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (!head||!head-&gt;next)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        ListNode *slow = head;</span><br><span class="line">        ListNode *fast = head;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> (fast &amp;&amp; fast-&gt;next) &#123;</span><br><span class="line">            slow = slow-&gt;next;</span><br><span class="line">            fast = fast-&gt;next-&gt;next;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (slow == fast)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hasCycle</span><span class="params">(self, head)</span>:</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> head==<span class="keyword">None</span> <span class="keyword">or</span> head.next==<span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">        </span><br><span class="line">        slow = head</span><br><span class="line">        fast = head</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            slow = slow.next</span><br><span class="line">            fast = fast.next.next</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (slow == fast):</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">            </span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">False</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;Given a linked list, determine if it has a cycle in it.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Follow up:&lt;br&gt;Can you solve it without using extra sp
+      
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
+    
+    
+      <category term="leecode" scheme="http://yoursite.com/tags/leecode/"/>
     
   </entry>
   
