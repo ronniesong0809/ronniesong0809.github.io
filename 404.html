@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>New Domain https://ronniesong.ml</title>
+</head>
+
+<body>
+	<p>redirecting website to new domain<a href="https://ronniesong.ml" target="_blank">https://ronniesong.ml</a></p>
+</body>
+<script src="http://cdn.bootcss.com/purl/2.3.1/purl.min.js"></script>
+<script>
+	var url = purl();
+	if (url.attr('host') == 'ronniesong.tk') {
+		var old_url = url.attr('source');
+		var new_url = old_url.replace('ronniesong.tk', "ronniesong.ml");
+		window.location.replace(new_url);
+	} else if (url.attr('host') == 'www.ronniesong.tk') {
+		var old_url = url.attr('source');
+		var new_url = old_url.replace('www.ronniesong.tk', "ronniesong.ml");
+		window.location.replace(new_url);
+	} else {
+		window.location.href = "https://ronniesong.ml";
+	}
+</script>
+
+</html>
